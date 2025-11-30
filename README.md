@@ -2,14 +2,17 @@
 
 A full-stack grocery delivery web application built with the MERN stack that connects customers with local stores for seamless online shopping and doorstep delivery.
 
+![MERN Stack](https://img.shields.io/badge/Stack-MERN-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
 ---
 
 ## 📋 Table of Contents
 
 - [Problem Statement](#-problem-statement)
 - [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [System Architecture](#-system-architecture)
+- [Tech Stack](#️-tech-stack)
+- [System Architecture](#️-system-architecture)
 - [API Documentation](#-api-documentation)
 - [Installation](#-installation)
 - [Environment Variables](#-environment-variables)
@@ -77,7 +80,7 @@ The project aims to develop a Grocery Delivery Web Application using the MERN st
 | **Database** | MongoDB |
 | **Authentication** | JWT (JSON Web Tokens) |
 | **Payment** | Stripe Payment Gateway |
-| **Hosting** | Vercel (Frontend & Backend), MongoDB Atlas |
+| **Hosting** | Vercel (Frontend), Render (Backend), MongoDB Atlas |
 
 ---
 
@@ -95,7 +98,7 @@ The project aims to develop a Grocery Delivery Web Application using the MERN st
 ┌────────────────────▼────────────────────────────────────────┐
 │                         Backend                             │
 │                   (Node.js + Express.js)                    │
-│                    Hosted on Vercel                         │
+│                    Hosted on Render                         │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      │ MongoDB Driver
@@ -253,43 +256,26 @@ The application will be available at `http://localhost:3000`
 3. Configure environment variables
 4. Deploy
 
-### Backend Deployment (Vercel)
+### Backend Deployment (Render)
 
-1. Create `vercel.json` in the backend root:
-
-```json
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ]
-}
-```
+1. Push your code to GitHub
+2. Make account on Render and deploy as Web Service
+3. Configure environment variables
+4. Deploy
 
 2. Deploy to Vercel following the same steps as frontend
 
 ### Database (MongoDB Atlas)
 
 1. Create a cluster on MongoDB Atlas
-2. Whitelist IP addresses
-3. Get connection string and add to environment variables
+2. Whitelist IP addresses:
+   - For Render: Add `0.0.0.0/0` (allow access from anywhere)
+   - Or find Render's outbound IP addresses and whitelist them
+3. Create database user with read/write permissions
+4. Get connection string and add to environment variables
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of your application here
-
----
 
 ## 🤝 Contributing
 
@@ -300,7 +286,6 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add some feature'`)
 4. Push to the branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
-
 
 ---
 
@@ -330,5 +315,5 @@ For any queries or suggestions, please reach out:
 ---
 
 <div align="center">
-  Made with ❤️ by Aman
+  Made with ❤️ by Aman Bhatnagar
 </div>
